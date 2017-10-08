@@ -1,6 +1,6 @@
 # MBTI_API
 
-This is a simple API made with the Go programming language. The data is broken down into two columns.  One column contains the Meyers-Briggs personality type, and the other column contains posts by the user in question seperated by two pipes. There is a script for seeding and creating the SQLite3 database and a second script to start a local server to serve the JSON.
+This is a simple API made with the Go programming language. The data is broken down into two fields.  One column contains the Meyers-Briggs personality type of the poster, and the other field contains posts authored the user in question seperated by two pipes. There is a script for seeding and creating the SQLite3 database and a second script to start a local server to serve the JSON.
 
 **I did not implement any security mechanisms at this time.  Do not use this application in a production environment or any other place you will receive unknown input from users.  This application is vulnerable to SQL injection due to the method in which the server handles incoming HTTP requests.**
 
