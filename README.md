@@ -10,7 +10,7 @@ Clone this repository
 
 Download the CSV dataset [here](https://www.kaggle.com/datasnaek/mbti-type/data) and save it in the 'data' directory.  Leave the file name as 'mbti_1.csv'
 
-If you want to compile the binaries yourself, you can will need to [install Go](https://golang.org/doc/install).  To run the binaries after the language is installed on your computer, use the following commands:
+If you want to compile the binaries yourself, you can will need to [install Go](https://golang.org/doc/install).  To run the go scripts or to compile the binaries after the language is installed on your computer, use the following commands:
 
 You can simply run the scripts using the commands below from the root directory of the cloned project.
 ```bash
