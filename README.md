@@ -14,21 +14,25 @@ If you want to compile the binaries yourself, you can will need to [install Go](
 
 You can simply run the scripts using the commands below from the root directory of the cloned project.
 ```bash
-> go run setup_db/populate_database.go
+> go run src/setup_db/populate_database.go
 #this step may take a few minutes
-> go run API/MBTI_API.go
+> go run src/API/MBTI_API.go
 #this will launch your server
 ```
 
 if you'd like to compile the binaries and run them, you can do so with the following commands:
+
 ```bash
-> go build setup_db/populate_database.go
-> ./setup_db/populate_database
+> go build src/setup_db/populate_database.go
+> cp src/setup_db/populate_database bin/setup_db/populate_database
+> ./src/setup_db/populate_database
 #this step may take a few minutes
-> go build API/MBTI_API.go
-> ./API/MBTI_API
+> go build src/API/MBTI_API.go
+> cp src/setup_db/MBTI_API bin/setup_db/MBTI_API
+> ./bin/API/MBTI_API
 #this will launch your server
 ```
 
 Then you can navigate to localhost:3000/MBTI?type=<MBTI Type> to see json by MBTI type.
-This will need to be in all caps with a lowercase type in order to view the proper page
+This will need to be in all caps with a lowercase type in order to view the proper page.
+
