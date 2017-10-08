@@ -6,10 +6,11 @@ import (
 	"fmt"
 	"io"
 	"os"
-	"strconv"
 
 	sqlite3 "github.com/mattn/go-sqlite3"
 )
+
+var count int
 
 func main() {
 	sql.Register("go-sqlite3", &sqlite3.SQLiteDriver{})
@@ -33,16 +34,7 @@ func main() {
 		}
 		statement, _ = database.Prepare("INSERT INTO mbti_data (mbti_type, posts) VALUES (?, ?)")
 		statement.Exec(record[0], record[1])
-
+		count++
 	}
-
-	rows, _ := database.Query("SELECT id, mbti_type, posts FROM mbti_data LIMIT 5")
-	var id int
-	var mbti_type string
-	var posts string
-	for rows.Next() {
-		rows.Scan(&id, &mbti_type, &posts)
-		fmt.Println(strconv.Itoa(id) + ": " + mbti_type + " " + posts)
-	}
-
+	fmt.Printf("Successfully added %v rows of data to the database.\n", count)
 }
