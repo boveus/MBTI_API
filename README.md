@@ -24,11 +24,9 @@ if you'd like to compile the binaries and run them, you can do so with the follo
 
 ```bash
 > go build src/setup_db/populate_database.go
-> cp src/setup_db/populate_database bin/setup_db/populate_database
 > ./src/setup_db/populate_database
 #this step may take a few minutes
 > go build src/API/MBTI_API.go
-> cp src/setup_db/MBTI_API bin/setup_db/MBTI_API
 > ./bin/API/MBTI_API
 #this will launch your server
 ```
