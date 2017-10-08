@@ -7,10 +7,12 @@ import (
 	"io"
 	"os"
 	"strconv"
+
+	sqlite3 "github.com/mattn/go-sqlite3"
 )
 
 func main() {
-
+	sql.Register("go-sqlite3", &sqlite3.SQLiteDriver{})
 	database, _ := sql.Open("sqlite3", "./data/mbti_data.db")
 	statement, _ := database.Prepare("CREATE TABLE IF NOT EXISTS mbti_data (id INTEGER PRIMARY KEY, mbti_type TEXT, posts TEXT)")
 	statement.Exec()

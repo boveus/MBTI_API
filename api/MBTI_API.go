@@ -2,7 +2,10 @@ package main
 
 import (
 	"database/sql"
+	"fmt"
 	"log"
+
+	sqlite3 "github.com/mattn/go-sqlite3"
 )
 
 var database *sql.DB
@@ -14,10 +17,13 @@ type Data struct {
 }
 
 func init() {
+	sql.Register("go-sqlite3", &sqlite3.SQLiteDriver{})
 	database, _ = sql.Open("sqlite3", "./data/mbti_data.db")
 }
 
 func main() {
+	query_by_type("INTP")
+	fmt.Printf("%v", query_data)
 }
 
 func query_by_type(mbti_type string) {
@@ -29,7 +35,6 @@ func query_by_type(mbti_type string) {
 		if err != nil {
 			log.Fatal(err)
 		}
-
 		query_data = append(query_data, Data{mbti_type: mbti_type, posts: posts})
 	}
 }
