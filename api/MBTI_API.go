@@ -28,7 +28,7 @@ func main() {
 
 func query_by_type(mbti_type string) {
 	query_data = nil
-	rows, _ := database.Query("SELECT mbti_type, posts FROM mbti_data WHERE mbti_type=?", mbti_type)
+	rows, _ := database.Query("SELECT mbti_type, posts FROM mbti_data WHERE mbti_type=? LIMIT 5", mbti_type)
 	var posts string
 	for rows.Next() {
 		err := rows.Scan(&mbti_type, &posts)
