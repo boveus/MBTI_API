@@ -35,4 +35,3 @@ if you'd like to compile the binaries and run them, you can do so with the follo
 
 Then you can navigate to localhost:3000/MBTI?type=<MBTI Type> to see json by MBTI type.
 This will need to be in all caps with a lowercase type in order to view the proper page.
-
