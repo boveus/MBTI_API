@@ -4,6 +4,9 @@ This is a simple API made with the Go programming language. The data is broken d
 
 **I did not implement any security mechanisms at this time.  Do not use this application in a production environment or any other place you will receive unknown input from users.  This application is vulnerable to SQL injection due to the method in which the server handles incoming HTTP requests.**
 
+![Golang gopher running (pixelated](https://github.com/egonelbre/gophers/blob/master/.thumb/animation/2bit-sprite/demo.gif?raw=true)
+
+
 # Instructions for setup:
 
 Clone this repository
